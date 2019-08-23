@@ -1,0 +1,20 @@
+<config>
+    <input>
+        <!--
+        “in”的值：confusion-0.0.1-SNAPSHOT.jar，表示需要被进行混淆的包；
+        “out”的值：confusion-0.0.1-SNAPSHOT-obfuscated.jar，是混淆后的包，这个是我们需要的。
+        -->
+        <jar in="allatori-0.0.1-SNAPSHOT.jar"
+             out="allatori-0.0.1-SNAPSHOT-obfuscated.jar"/>
+    </input>
+
+    <!-- 一些配置 -->
+    <keep-names>
+        <class access="protected+">
+            <field access="protected+"/>
+            <method access="protected+"/>
+        </class>
+    </keep-names>
+
+    <property name="log-file" value="log.xml"/>
+</config>
